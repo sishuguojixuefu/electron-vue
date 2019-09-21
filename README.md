@@ -18,9 +18,6 @@ The boilerplate for making electron applications built with vue (pretty much wha
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-[![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
-</div>
-
 ## Overview
 
 The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` with `vue-loader`, `electron-packager` or `electron-builder`, and some of the most used plugins like `vue-router`, `vuex`, and so much more.
@@ -56,7 +53,7 @@ This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/
 ```bash
 # Install vue-cli and scaffold boilerplate
 npm install -g vue-cli
-vue init simulatedgreg/electron-vue my-project
+vue init sishuguojixuefu/electron-vue my-project
 
 # Install dependencies and run your app
 cd my-project
@@ -67,14 +64,6 @@ yarn run dev # or npm run dev
 ##### Are you a Windows User?
 
 Make sure to check out [**A Note for Windows Users**](https://simulatedgreg.gitbooks.io/electron-vue/content/en/getting_started.html#a-note-for-windows-users) to make sure you have all the necessary build tools needed for electron and other dependencies.
-
-##### Wanting to use Vue 1?
-
-Just point to the `1.0` branch. Please note that electron-vue has officially deprecated the usage of `vue@^1`, so project structure, features, and documentation will reflect those changes ([**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs)).
-
-```bash
-vue init simulatedgreg/electron-vue#1.0 my-project
-```
 
 ### Next Steps
 
