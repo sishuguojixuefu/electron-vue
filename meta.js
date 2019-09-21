@@ -82,34 +82,6 @@ module.exports = {
       choices: ['axios', 'vue-electron', 'vue-router', 'vuex', 'vuex-electron'],
       default: ['axios', 'vue-electron', 'vue-router', 'vuex', 'vuex-electron']
     },
-    eslint: {
-      type: 'confirm',
-      require: true,
-      message: 'Use linting with ESLint?',
-      default: true
-    },
-    eslintConfig: {
-      when: 'eslint',
-      type: 'list',
-      message: 'Which ESLint config would you like to use?',
-      choices: [
-        {
-          name: 'Standard (https://github.com/feross/standard)',
-          value: 'standard',
-          short: 'Standard'
-        },
-        {
-          name: 'Airbnb (https://github.com/airbnb/javascript)',
-          value: 'airbnb',
-          short: 'Airbnb'
-        },
-        {
-          name: 'none (configure it yourself)',
-          value: 'none',
-          short: 'none'
-        }
-      ]
-    },
     unit: {
       type: 'confirm',
       message: 'Set up unit testing with Karma + Mocha?',
