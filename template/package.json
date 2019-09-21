@@ -75,11 +75,15 @@
       "icon": "build/icons"
     }
   },
+  "engines": {
+    "node": "12.*.*"
+  },
 {{/if_eq}}
   "dependencies": {
     "vue": "^2.5.16"{{deps plugins}}
   },
   "devDependencies": {
+    "@babel/core": "^7.6.0",
     "ajv": "^6.5.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -95,14 +99,14 @@
     "css-loader": "^0.28.11",
     "del": "^3.0.0",
     "devtron": "^1.4.0",
-    "electron": "^2.0.4",
-    "electron-debug": "^1.5.0",
+    "electron": "^6.0.10",
+    "electron-debug": "^3.0.1",
     "electron-devtools-installer": "^2.2.4",
     {{#if_eq builder 'packager'}}
-    "electron-packager": "^12.1.0",
-    "electron-rebuild": "^1.8.1",
+    "electron-packager": "^14.0.6",
+    "electron-rebuild": "^1.8.6",
     {{else}}
-    "electron-builder": "^20.19.2",
+    "electron-builder": "^21.2.",
     {{/if_eq}}
     {{#eslint}}
     "babel-eslint": "^8.2.3",
