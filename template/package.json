@@ -106,7 +106,7 @@
     "electron-packager": "^14.0.6",
     "electron-rebuild": "^1.8.6",
     {{else}}
-    "electron-builder": "^21.2.",
+    "electron-builder": "^21.2.0",
     {{/if_eq}}
     {{#eslint}}
     "babel-eslint": "^8.2.3",
