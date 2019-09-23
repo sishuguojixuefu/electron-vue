@@ -22,6 +22,8 @@
     "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
     "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
     "dev": "node .electron-vue/dev-runner.js",
+    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter src",
+    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix src",
     {{#if e2e}}
     "e2e": "npm run pack && mocha test/e2e",
     {{/if}}
@@ -33,8 +35,8 @@
     {{/testing}}
     {{#if unit}}
     "unit": "karma start test/unit/karma.conf.js"
-    {{/if}}
-    "postinstall": "{{#if eslint}}npm run lint:fix{{/if}}"
+    {{/if}},
+    "postinstall": "npm run lint:fix"
   },
   {{#if_eq builder 'builder'}}
   "build": {
