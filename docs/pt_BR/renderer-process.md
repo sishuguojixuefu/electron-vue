@@ -34,7 +34,7 @@ Routes are held in `src/renderer/router/index.js` and defined like so...
 {
   path: '<routePath>',
   name: '<routeName>',
-  component: require('@/components/<routeName>View')
+  component: require('src/components/<routeName>View')
 }
 ```
 
