@@ -16,7 +16,7 @@
     "build:mas": "cross-env BUILD_TARGET=mas node .electron-vue/build.js",
     "build:win32": "cross-env BUILD_TARGET=win32 node .electron-vue/build.js",
     {{else}}
-    "build": "node .electron-vue/build.js && electron-builder",
+    "build": "yarn build:clean && node .electron-vue/build.js && electron-builder",
     "build:dir": "node .electron-vue/build.js && electron-builder --dir",
     {{/if_eq}}
     "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
