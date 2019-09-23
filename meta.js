@@ -80,7 +80,7 @@ module.exports = {
       type: 'checkbox',
       message: 'Select which Vue plugins to install',
       choices: ['axios', 'vue-electron', 'vue-router', 'vuex', 'vuex-electron'],
-      default: ['axios', 'vue-electron', 'vue-router', 'vuex', 'vuex-electron']
+      default: ['axios', 'vue-electron', 'vue-router', 'vuex']
     },
     unit: {
       type: 'confirm',
