@@ -16,6 +16,7 @@ module.exports = {
   },
   plugins: ['vue', 'prettier'],
   rules: {
+    'no-plusplus': 0,
     'import/no-unresolved': 0,
     'import/no-extraneous-dependencies': 0,
     // allow paren-less arrow functions
