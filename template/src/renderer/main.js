@@ -13,8 +13,10 @@ import store from './store'
 
 {{#isEnabled plugins 'vue-electron'}}
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
+
 {{/isEnabled}}
 {{#isEnabled plugins 'axios'}}
+// eslint-disable-next-line no-multi-assign
 Vue.http = Vue.prototype.$http = axios
 {{/isEnabled}}
 Vue.config.productionTip = false
