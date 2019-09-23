@@ -25,10 +25,6 @@
     {{#if e2e}}
     "e2e": "npm run pack && mocha test/e2e",
     {{/if}}
-    {{#if eslint}}
-    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter src{{#testing unit e2e}} test{{/testing}}",
-    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix src{{#testing unit e2e}} test{{/testing}}",
-    {{/if}}
     "pack": "npm run pack:main && npm run pack:renderer",
     "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
     "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
@@ -38,7 +34,6 @@
     {{#if unit}}
     "unit": "karma start test/unit/karma.conf.js",
     {{/if}}
-    "postinstall": "{{#if eslint}}npm run lint:fix{{/if}}"
   },
   {{#if_eq builder 'builder'}}
   "build": {
