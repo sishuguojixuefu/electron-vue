@@ -34,8 +34,8 @@
     "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}",
     {{/testing}}
     {{#if unit}}
-    "unit": "karma start test/unit/karma.conf.js"
-    {{/if}},
+    "unit": "karma start test/unit/karma.conf.js",
+    {{/if}}
     "postinstall": "npm run lint:fix"
   },
   {{#if_eq builder 'builder'}}
