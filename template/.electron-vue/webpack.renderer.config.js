@@ -148,7 +148,8 @@ let rendererConfig = {
       },
       nodeModules: process.env.NODE_ENV !== 'production'
         ? path.resolve(__dirname, '../node_modules')
-        : false
+        : false,
+      chunks: ['main', 'renderer']
     }),
     new webpack.NoEmitOnErrorsPlugin()
   ],

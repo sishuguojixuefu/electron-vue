@@ -59,6 +59,12 @@ module.exports = {
         message: 'Application Id',
         default: 'com.example.yourapp'
     },
+    autoUpdater: {
+      type: 'string',
+      required: true,
+      message: '',
+      default: 'http://xxx.xxx.x.xxx:xxxx/xxxx/'
+    },
     appver: {
         type: 'string',
         required: true,
@@ -79,18 +85,18 @@ module.exports = {
     plugins: {
       type: 'checkbox',
       message: 'Select which Vue plugins to install',
-      choices: ['axios', 'vue-electron', 'vue-router', 'vuex', 'vuex-electron'],
-      default: ['axios', 'vue-electron', 'vue-router', 'vuex', 'vuex-electron']
+      choices: ['axios', 'vue-electron', 'vue-router', 'vuex','electron-is-dev','electron-log','electron-store','electron-updater'],
+      default: ['axios', 'vue-electron', 'vue-router', 'vuex','electron-is-dev','electron-log','electron-store','electron-updater']
     },
     unit: {
       type: 'confirm',
       message: 'Set up unit testing with Karma + Mocha?',
-      required: true
+      required: false
     },
     e2e: {
       type: 'confirm',
       message: 'Set up end-to-end testing with Spectron + Mocha?',
-      require: true
+      require: false
     },
     builder: {
       type: 'list',
@@ -117,11 +123,14 @@ module.exports = {
     deps (plugins) {
       let output = ''
       let dependencies = {
-        'axios': '^0.18.0',
+        'axios': '^0.19.0',
         'vue-electron': '^1.0.6',
-        'vue-router': '^3.0.1',
-        'vuex': '^3.0.1',
-        'vuex-electron': '^1.0.0'
+        'vue-router': '^3.1.1',
+        'vuex': '^3.1.1',
+        "electron-is-dev": ^1.1.0",
+        "electron-log": "^3.0.8",
+        "electron-store": "^5.0.0",
+        "electron-updater": "^4.1.2",
       }
 
       if (Object.keys(plugins).length > 0) output += ',\n'
