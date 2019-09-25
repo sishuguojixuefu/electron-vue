@@ -14,6 +14,7 @@ import '../renderer/store'
 if (process.env.NODE_ENV !== 'development') {
   global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\'){{#if_eq eslintConfig 'airbnb'}} // eslint-disable-line{{/if_eq}}
 }
+const AppUpdater = require('./AppUpdater')
 
 let mainWindow
 const winURL = process.env.NODE_ENV === 'development'
@@ -37,6 +38,10 @@ function createWindow () {
 
   mainWindow.on('closed', () => {
     mainWindow = null
+  })
+  global.mainWindow = mainWindow
+  global.mainWindow.webContents.on('did-finish-load', () => {
+    AppUpdater.checkVersion()
   })
 }
 

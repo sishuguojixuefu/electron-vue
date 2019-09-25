@@ -79,7 +79,7 @@ module.exports = {
     plugins: {
       type: 'checkbox',
       message: 'Select which Vue plugins to install',
-      choices: ['axios', 'vue-electron', 'vue-router', 'vuex', 'vuex-electron'],
+      choices: ['axios', 'vue-electron', 'vue-router', 'vuex'],
       default: ['axios', 'vue-electron', 'vue-router', 'vuex']
     },
     unit: {
@@ -100,11 +100,6 @@ module.exports = {
           name: 'electron-builder (https://github.com/electron-userland/electron-builder)',
           value: 'builder',
           short: 'builder'
-        },
-        {
-          name: 'electron-packager (https://github.com/electron-userland/electron-packager)',
-          value: 'packager',
-          short: 'packager'
         }
       ]
     }
@@ -120,8 +115,7 @@ module.exports = {
         'axios': '^0.18.0',
         'vue-electron': '^1.0.6',
         'vue-router': '^3.0.1',
-        'vuex': '^3.0.1',
-        'vuex-electron': '^1.0.0'
+        'vuex': '^3.0.1'
       }
 
       if (Object.keys(plugins).length > 0) output += ',\n'
