@@ -31,5 +31,4 @@ The provided project structure should feel familiar to the setup provided in the
 
 > Vuex is a **state management pattern + library **for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion.
 
-The provided project structure is rather bare but does encourage the use of `vuex`'s module pattern to help organize your data stores. The extra `@/store/modules/index.js` let's your `vuex` store import all modules in a one-shot manner.
-
+The provided project structure is rather bare but does encourage the use of `vuex`'s module pattern to help organize your data stores. The extra `src/store/modules/index.js` let's your `vuex` store import all modules in a one-shot manner.

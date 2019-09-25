@@ -32,7 +32,7 @@ src/renderer/components
 {
   path: '<routePath>',
   name: '<routeName>',
-  component: require('@/components/<routeName>View')
+  component: require('src/components/<routeName>View')
 }
 ```
 

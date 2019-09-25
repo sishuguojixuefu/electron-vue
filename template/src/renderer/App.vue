@@ -11,7 +11,7 @@
 <script>
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
-  import LandingPage from '@/components/LandingPage'
+  import LandingPage from 'src/components/LandingPage'
 
 {{/isEnabled}}
   export default {

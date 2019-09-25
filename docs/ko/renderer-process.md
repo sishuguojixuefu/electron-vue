@@ -34,7 +34,7 @@ Routes는 `src/renderer/router/index.js`에 저장되며 다음과 같이 정의
 {
   path: '<routePath>',
   name: '<routeName>',
-  component: require('@/components/<routeName>View')
+  component: require('src/components/<routeName>View')
 }
 ```
 

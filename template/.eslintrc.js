@@ -16,6 +16,7 @@ module.exports = {
   },
   plugins: ['vue', 'prettier'],
   rules: {
+    'no-plusplus': 0,
     'import/no-unresolved': 0,
     'import/no-extraneous-dependencies': 0,
     // allow paren-less arrow functions
@@ -60,6 +61,8 @@ module.exports = {
     'vue/html-indent': 0,
     'vue/order-in-components': 0,
     'vue/attribute-hyphenation': 0,
+    'vue/singleline-html-element-content-newline': 0,
+    'vue/multiline-html-element-content-newline': 0,
     'vue/no-parsing-error': [
       2,
       {
