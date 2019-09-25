@@ -65,6 +65,11 @@ module.exports = {
         message: 'Application Version',
         default: '0.0.1'
     },
+    updaterURL:{
+      type: 'string',
+      required: true,
+      message: 'Automatically updated URL address'
+    },
     description: {
       type: 'string',
       required: false,
