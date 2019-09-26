@@ -90,12 +90,12 @@ module.exports = {
     unit: {
       type: 'confirm',
       message: 'Set up unit testing with Karma + Mocha?',
-      required: true
+      required: false
     },
     e2e: {
       type: 'confirm',
       message: 'Set up end-to-end testing with Spectron + Mocha?',
-      require: true
+      require: false
     },
     builder: {
       type: 'list',
