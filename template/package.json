@@ -55,13 +55,6 @@
     },
     "asar": true,
     "compression": "maximum",
-    "publish": [
-      {
-        "provider": "generic",
-        "url": "{{ updaterURL }}",
-        "channel": "latest"
-      }
-    ],
     "extraResources": [
       "static"
     ],
@@ -84,10 +77,24 @@
       ]
     },
     "mac": {
-      "icon": "build/icons/icon.icns"
+      "icon": "build/icons/icon.icns",
+      "publish": [
+        {
+          "provider": "generic",
+          "url": "{{ updaterURL }}",
+          "channel": "latest"
+        }
+      ],
     },
     "win": {
-      "icon": "build/icons/icon.ico"
+      "icon": "build/icons/icon.ico",
+      "publish": [
+        {
+          "provider": "generic",
+          "url": "{{ updaterURL }}",
+          "channel": "latest"
+        }
+      ],
     },
     "linux": {
       "icon": "build/icons"
