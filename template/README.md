@@ -2,31 +2,51 @@
 
 > {{ description }}
 
-#### Build Setup
+## Build Setup
 
 ``` bash
 # install dependencies
-npm install
-
+$ yarn
 # serve with hot reload at localhost:9080
-npm run dev
-
+$ yarn dev
 # build electron application for production
-npm run build
-
+$ yarn build
 {{#testing unit e2e}}
 # run {{#unit}}unit{{/unit}}{{#unit}}{{#e2e}} & {{/e2e}}{{/unit}}{{#e2e}}end-to-end{{/e2e}} tests
-npm test
-
+yarn test
 {{/testing}}
-
 {{#if eslint}}
 # lint all JS/Vue component files in `src/`
 npm run lint
-
 {{/if}}
 ```
 
----
+## 版本维护
 
-This project was generated with [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
+### 热更新配置
+
+### 在新写功能时
+
+- 在package.json中增加中版本号，如： 0.1.5 => 0.2.0
+- 在package.json中修改版本的信息，
+
+```json
+...
+"releaseInfo": {
+  "releaseNotes": "新增订单基本配置,添加订单,订单收款功能,学科配置等功能"
+},
+...
+```
+
+### 修复Bug时
+
+- 在package.json中增加小版本号，如： 0.2.0 => 0.2.1
+- 在package.json中修改版本的信息，
+
+```json
+...
+"releaseInfo": {
+  "releaseNotes": "修复Bugxxx"
+},
+...
+```
