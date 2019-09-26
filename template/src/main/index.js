@@ -40,10 +40,12 @@ function createWindow () {
     mainWindow = null
     global.mainWindow = null
   })
-  global.mainWindow = mainWindow
-  global.mainWindow.webContents.on('did-finish-load', () => {
+
+  mainWindow.webContents.on('did-finish-load', () => {
     AppUpdater.checkVersion()
   })
+
+  global.mainWindow = mainWindow
 }
 
 app.on('ready', createWindow)
