@@ -54,6 +54,9 @@
       "output": "build"
     },
     "asar": true,
+    "releaseInfo": {
+      "releaseNotes": ""
+    },
     "compression": "maximum",
     "extraResources": [
       "static"

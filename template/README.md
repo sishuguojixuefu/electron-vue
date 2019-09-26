@@ -21,11 +21,16 @@ npm run lint
 {{/if}}
 ```
 
-## 版本维护
+## 自动更新配置
 
-### 热更新配置
+### 服务器配置
 
-### 在新写功能时
+- 配置 `app-update.yml` url 字段
+- 配置 `package.json` build.publish.url 字段
+
+### 版本维护
+
+#### 在新写功能时
 
 - 在package.json中增加中版本号，如： 0.1.5 => 0.2.0
 - 在package.json中修改版本的信息，
@@ -38,7 +43,7 @@ npm run lint
 ...
 ```
 
-### 修复Bug时
+#### 修复Bug时
 
 - 在package.json中增加小版本号，如： 0.2.0 => 0.2.1
 - 在package.json中修改版本的信息，
