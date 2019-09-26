@@ -84,7 +84,7 @@
           "url": "{{ updaterURL }}",
           "channel": "latest"
         }
-      ],
+      ]
     },
     "win": {
       "icon": "build/icons/icon.ico",
@@ -94,7 +94,7 @@
           "url": "{{ updaterURL }}",
           "channel": "latest"
         }
-      ],
+      ]
     },
     "linux": {
       "icon": "build/icons"
