@@ -38,6 +38,7 @@ function createWindow () {
 
   mainWindow.on('closed', () => {
     mainWindow = null
+    global.mainWindow = null
   })
   global.mainWindow = mainWindow
   global.mainWindow.webContents.on('did-finish-load', () => {
